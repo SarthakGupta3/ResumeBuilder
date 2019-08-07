@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css"> 
+   
+</head>
+<body>
+        <div style="width:100%;height: 50px;">
+                <ul style="background-color:dodgerblue;margin:0;list-style: none;display: flex;">
+                    <a href="/"><li>Home</li></a>
+                    <a href="/login"  id="first"><li>Login</li></a>
+                    <a href="/register"><li>Register</li></a>
+                </ul>
+            </div>
+        
+        <form id="centering" action="/new-user" method="POST"> 
+            <% if(errorMessage) { %>
+                <h6 style="margin:0;color:red;" ><%= errorMessage %></h6>
+                <% } %>
+        <h1>Register</h1>
+        <input type="text" placeholder="Username" name="email" required>
+        <input type="password" placeholder="password" name="password" required>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

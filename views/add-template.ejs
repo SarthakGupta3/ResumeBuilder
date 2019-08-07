@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add template</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+</head>
+<body>
+    <header style="width:100%;height: 50px;">
+        <ul style="background-color:dodgerblue;margin:0;list-style: none;display: flex;">
+            <li id="first"><button style="border:none;background-color: dodgerblue;color:white;">Account</button></li>
+            <a href="/logout"><li>Logout</li></a>
+        </ul>
+    </header>
+    
+
+    
+            <form id="centering" action="/admin/add-template" method="POST" enctype="multipart/form-data">
+                <div>
+                        <label for="title">Title</label>
+                        <input type="text" placeholder="title" name="title" required>
+                </div>
+                <div>
+                        <label for="template">Template</label>
+                        <input type="file" placeholder="title" name="template" required>
+                </div>
+                <div>
+                        <label for="image">Image</label>
+                        <input type="file" placeholder="title" name="image" required>
+                </div>
+               <div>
+                    <label for="description">Description</label>
+                    <textarea rows="5" style="width:500px;" name="description"></textarea>
+               </div>
+             
+                <button type="submit">Submit</button>
+            </form>
+</body>
+</html>

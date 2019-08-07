@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Saved Works</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+   
+</head>
+<body>
+        <header style="width:100%;height: 50px;">
+                <ul style="background-color:dodgerblue;margin:0;list-style: none;display: flex;">
+
+                        <a href="/templates" id="first"><li>Templates</li></a>
+                        <a href="/logout"><li>Logout</li></a>
+
+                </ul>
+            </header>
+
+    <% for(let each of works){ %>
+        <div style="height:100px; width:100%; display: flex;justify-content: space-around">
+            <p style="width:300px;"><%= each.title %></p>
+            <img style="max-height:100px;" class="image" src="/<%=each.image%>">
+            <a href="/remove/<%=each.savePath.split('/')[1]%>">Remove</a>
+            <a href="/<%=each.savePath%>?id=<%=each.id%>">Start editing</a>
+        </div>
+    <% } %>
+</body>
+</html>

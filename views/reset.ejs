@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css"> 
+   
+</head>
+<body>
+        <div style="width:100%;height: 50px;">
+                <ul style="background-color:dodgerblue;margin:0;list-style: none;display: flex;">
+                    <a href="/"><li>Home</li></a>
+                    <a href="/login"  id="first"><li>Login</li></a>
+                    <a href="/register"><li>Register</li></a>
+                </ul>
+            </div>
+    <form id="centering" action="/reset" method="POST">
+        <% if(errorMessage) { %>
+        <h5 style="color:red;">No such User</h5>
+        <% } %>
+        <h1>Reset</h1>
+        <input type="text" placeholder="Enter email" name="email" required>
+        <button type="submit">Reset</button>
+        <p style="color:forestgreen;">Enter your email and check your email for the password.</p>
+    </form>
+</body>
+</html>
