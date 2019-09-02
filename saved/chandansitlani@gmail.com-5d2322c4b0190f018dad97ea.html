@@ -1,0 +1,427 @@
+<head>
+    <title>Resume</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+    <style>
+        body{
+    width:100%;
+    }
+.page{
+    margin: 10px auto;
+    width: 8.27in;
+    min-height:11.69in;
+    background-color: white;
+    padding:20px;
+}
+
+input{
+    width:100%;
+   border:none;
+}
+        .single-line{
+            display: flex;
+            width:100%;
+        }
+        hr{
+          border:none;
+          height:5px;
+          margin:0;
+        }
+        textarea{
+            border:none;
+            width:100%;
+            resize:none;
+        }
+        h5{
+            background-color:lightgrey;
+        }
+        h6{
+            background-color:lightgrey;
+        }
+        button{
+            border:none;
+        }
+        .parent{
+            padding-top:5px;
+            padding-bottom:5px;
+        }
+        .toggle{
+            display:none;
+        }
+
+        .packery-drop-placeholder {
+  outline: 3px dashed rgb(26, 163, 49);
+  outline-offset: -6px;
+  -webkit-transition: -webkit-transform 0.2s;
+          transition: transform 0.2s;
+}
+
+
+    </style>
+</head>
+<body onload="move()" class="bg-secondary" id="body">
+    <div class="page" style="padding:20px;">
+        <div class="sectionsmove" style="position: relative; height: 840.7px;"><div class="parent" style="width: 100%; position: absolute; left: 0px; top: 0px;">
+                     <div class="info" style="position: relative; height: 104px;"><div class="single-line move" style="position: absolute; left: 0px; top: 0px; touch-action: none;">
+                                <div style="width:100%;"><input type="text" placeholder="Address line-2" oninput="Value(event)"></div>
+                                <div class="padding icon"><i class="fa fa-bars"></i></div>
+                                <div class="padding icon"><button onclick="remove(event)"><i class="fa fa-trash-o"></i></button></div>
+                            </div><div class="single-line move" style="position: absolute; left: 0px; top: 26px; touch-action: none;">
+                                <div style="width:100%;"><input type="text" placeholder="Address line-3" oninput="Value(event)"></div>
+                                <div class="padding icon"><i class="fa fa-bars"></i></div>
+                                <div class="padding icon"><button onclick="remove(event)"><i class="fa fa-trash-o"></i></button></div>
+                            </div><div class="single-line move" style="position: absolute; left: 0px; top: 52px; touch-action: none;">
+                                <div style="width:100%;"><input type="text" placeholder="Mobile" oninput="Value(event)"></div>
+                                <div class="padding icon"><i class="fa fa-bars"></i></div>
+                                <div class="padding icon"><button onclick="remove(event)"><i class="fa fa-trash-o"></i></button></div>
+                            </div><div class="single-line move" style="position: absolute; left: 0px; top: 78px; touch-action: none;">
+                                <div style="width:100%;"><input type="text" placeholder="Email" oninput="Value(event)"></div>
+                                <div class="padding icon"><i class="fa fa-bars"></i></div>
+                                <div class="padding icon"><button onclick="remove(event)"><i class="fa fa-trash-o"></i></button></div>
+                            </div></div>
+                
+                    <div>
+                            <button class="bg-success icon" style="width:100%;" onclick="addField(event,0)">New Field</button>
+                    </div>
+                    <div>
+                            <hr style="background-color:black; margin-top:5px;">
+                            <hr style="background-color:grey;margin-bottom:10px;">
+                    </div>
+                           
+            </div><div class="parent" style="width: 100%; position: absolute; left: 0px; top: 163px;">
+                    <h5 class="single-line handle" style="touch-action: none;">PROFESSIONAL QUALIFICATION<div class="padding icon"><button style="background-color:lightgrey;"><i class="fa fa-bars"></i></button></div><button class="icon" style="background-color:lightgrey;" onclick="removesection()"><i class="fa fa-trash-o"></i></button></h5>
+                    <div class="info" style="position: relative; height: 38.6333px;"><div class="single-line move" style="position: absolute; left: 0px; top: 0px; touch-action: none;">
+                                <div class="padding icon"><i class="fa fa-bullseye"></i></div>
+                                <div style="width:100%;"><textarea placeholder="Your Qualification data here" rows="1" onkeyup="adjust(this)" style="height: 36px;"></textarea></div>
+                                <div class="padding icon"><i class="fa fa-bars"></i></div>
+                                <div class="padding icon"><button onclick="remove(event)"><i class="fa fa-trash-o"></i></button></div>
+                            </div></div>
+                    <div class="single-line icon" style="justify-content: flex-end;">
+                                <button onclick="addField(event,1)" class="bg-info"><i class="fa fa-plus"></i>New Field</button>
+                    </div>
+            </div><div class="parent" style="width: 100%; position: absolute; left: 0px; top: 267.633px;">  
+                    <h5 class="single-line handle" style="touch-action: none;">ACADEMIC DETAILS<div class="padding"><button class="icon" style="background-color:lightgrey;"><i class="fa fa-bars"></i></button></div><button style="background-color:lightgrey;" class="icon" onclick="removesection()"><i class="fa fa-trash-o"></i></button></h5>
+                <div class="info" style="position: relative; height: 115.9px;"><div class="single-line move" style="position: absolute; left: 0px; top: 0px; touch-action: none;">
+                            <div class="padding icon"><i class="fa fa-bullseye"></i></div>
+                            <div style="width:100%;"><textarea placeholder="Your data" rows="1" onkeyup="adjust(this)" style="height: 36px;"></textarea></div>
+                            <div class="padding icon"><i class="fa fa-bars"></i></div>
+                            <div class="padding icon"><button onclick="remove(event)"><i class="fa fa-trash-o"></i></button></div>
+                        </div><div class="single-line move" style="position: absolute; left: 0px; top: 38.6333px; touch-action: none;">
+                            <div class="padding icon"><i class="fa fa-bullseye"></i></div>
+                            <div style="width:100%;"><textarea placeholder="Your data" rows="1" onkeyup="adjust(this)" oninput="Value(event)" style="height: 36px;"></textarea></div>
+                            <div class="padding icon"><i class="fa fa-bars"></i></div>
+                            <div class="padding icon"><button onclick="remove(event)"><i class="fa fa-trash-o"></i></button></div>
+                        </div><div class="single-line move" style="position: absolute; left: 0px; top: 77.2666px; touch-action: none;">
+                            <div class="padding icon"><i class="fa fa-bullseye"></i></div>
+                            <div style="width:100%;"><textarea placeholder="Your data" rows="1" onkeyup="adjust(this)" style="height: 36px;"></textarea></div>
+                            <div class="padding icon"><i class="fa fa-bars"></i></div>
+                            <div class="padding icon"><button onclick="remove(event)"><i class="fa fa-trash-o"></i></button></div>
+                        </div></div>
+                <div class="single-line icon" style="justify-content: flex-end;">
+                        <button onclick="addField(event,1)" class="bg-info"><i class="fa fa-plus"></i>New Field</button>
+                </div>
+            </div><div class="parent" style="width: 100%; position: absolute; left: 0px; top: 449.533px;">
+                    <h5 class="single-line handle" style="touch-action: none;">EXPERIENCE<div class="padding"><button class="icon" style="background-color:lightgrey;"><i class="fa fa-bars"></i></button></div><button class="icon" onclick="removesection()" style="background-color:lightgrey;"><i class="fa fa-trash-o"></i></button></h5>
+                    <div class="info" style="position: relative; height: 77.2666px;"><div class="single-line move" style="position: absolute; left: 0px; top: 0px; touch-action: none;">
+                            <div class="padding icon"><i class="fa fa-bullseye"></i></div>
+                            <div style="width:100%;"><textarea placeholder="Suitable data" rows="1" onkeyup="adjust(this)" style="height: 36px;"></textarea></div>
+                            <div class="padding icon"><i class="fa fa-bars"></i></div>
+                            <div class="padding icon"><button onclick="remove(event)"><i class="fa fa-trash-o"></i></button></div>
+                        </div><div class="single-line move" style="position: absolute; left: 0px; top: 38.6333px; touch-action: none;">
+                            <div class="padding icon"><i class="fa fa-bullseye"></i></div>
+                            <div style="width:100%;"><textarea placeholder="Suitable data" rows="1" onkeyup="adjust(this)" style="height: 36px;"></textarea></div>
+                            <div class="padding icon"><i class="fa fa-bars"></i></div>
+                            <div class="padding icon"><button onclick="remove(event)"><i class="fa fa-trash-o"></i></button></div>
+                        </div></div>
+                    <div class="single-line icon" style="justify-content: flex-end;">
+                        <button onclick="addField(event,1)" class="bg-info"><i class="fa fa-plus"></i>New Field</button>
+                    </div>
+                </div><div class="parent" style="width: 100%; position: absolute; left: 0px; top: 592.8px;">
+                        <h5 class="single-line handle" style="touch-action: none;">PERSONAL SKILLS<div class="padding"><button class="icon" style="background-color:lightgrey;"><i class="fa fa-bars"></i></button></div><button class="icon" onclick="removesection()" style="background-color:lightgrey;"><i class="fa fa-trash-o"></i></button></h5>
+                        <div class="info" style="position: relative; height: 115.9px;"><div class="single-line move" style="position: absolute; left: 0px; top: 0px; touch-action: none;">
+                                    <div class="padding icon"><i class="fa fa-bullseye"></i></div>
+                                    <div style="width:100%;"><textarea placeholder="Skill Field 1" rows="1" onkeyup="adjust(this)" style="height: 36px;"></textarea></div>
+                                    <div class="padding icon"><i class="fa fa-bars"></i></div>
+                                    <div class="padding icon"><button onclick="remove(event)"><i class="fa fa-trash-o"></i></button></div>
+                                </div><div class="single-line move" style="position: absolute; left: 0px; top: 38.6333px; touch-action: none;">
+                                    <div class="padding icon"><i class="fa fa-bullseye"></i></div>
+                                    <div style="width:100%;"><textarea placeholder="Skill Field 2" rows="1" onkeyup="adjust(this)" style="height: 36px;"></textarea></div>
+                                    <div class="padding icon"><i class="fa fa-bars"></i></div>
+                                    <div class="padding icon"><button onclick="remove(event)"><i class="fa fa-trash-o"></i></button></div>
+                                </div><div class="single-line move" style="position: absolute; left: 0px; top: 77.2666px; touch-action: none;">
+                                    <div class="padding icon"><i class="fa fa-bullseye"></i></div>
+                                    <div style="width:100%;"><textarea placeholder="Skill Field 3" rows="1" onkeyup="adjust(this)" oninput="Value(event)" style="height: 36px;"></textarea></div>
+                                    <div class="padding icon"><i class="fa fa-bars"></i></div>
+                                    <div class="padding icon"><button onclick="remove(event)"><i class="fa fa-trash-o"></i></button></div>
+                                </div></div>
+                        <div class="single-line icon" style="justify-content: flex-end;">
+                                <button onclick="addField(event,1)" class="bg-info"><i class="fa fa-plus"></i>New Field</button>
+                        </div>
+                    </div><div class="parent" style="width: 100%; position: absolute; left: 0px; top: 774.7px;"><h5 class="single-line handle" style="touch-action: none;" contenteditable="true">CUSTOM HEADING(EDIT ME)<button class="icon" style="background-color:lightgrey;"><i class="fa fa-pencil" onclick="heading(event, 'mainsection')"></i></button><button class="icon" style="background-color:lightgrey;"><i class="fa fa-bars"></i></button><button class="icon" style="background-color:lightgrey;" onclick="removesection()"><i class="fa fa-trash-o"></i></button></h5><div class="single-line toggle"><input type="text" placeholder="your heading here"><button><i class="fa fa-check" onclick="changeHeading(event,'mainsection')"></i></button></div><div class="info"></div><div class="single-line" style="width:100%; justify-content:space-around;"><button class="icon" onclick="subsection(event)">Add Subsection</button><button class="icon" onclick="bullet(event)">Add Bullet</button><button class="icon" onclick="paragraph(event)">Add Paragraph</button></div></div></div>
+            <div>
+                <button class="icon" onclick="addsection(event)" style="width:100%;"><i class="fa fa-plus"></i>Add Custom Section</button>
+            </div>
+    
+
+                <form id="server" action="/templates/save" method="POST">
+                <input type="hidden" id="html-data" name="data">
+                <button class="saveButton icon">Save</button>
+                </form>
+                <button class="download icon">Download</button>
+    </div>
+    <script>
+            let infodrags=[];
+            let sectiondrags = [];
+            function move(){
+                
+                infodraggies =[];
+                sectiondrags = [];
+                $('.info').each(function(i, single) {
+                    var $layout = $(single);
+                    var $info = $layout.packery({
+                itemSelector: '.move'
+                })
+                $info.find('.move').each( function( i, gridItem ) {
+                var draggie = new Draggabilly( gridItem );
+                $info.packery( 'bindDraggabillyEvents',draggie);
+                infodrags.push(draggie);
+                });
+                });
+            
+                $('.sectionsmove').each(function(i,item){
+                    var $parent = $(item);
+                    var $parents = $parent.packery({
+                        itemSelector:'.parent',
+                    })
+                    $parents.find('.parent').each(function(i, item){
+                        var draggie = new Draggabilly(item,{
+                            handle:'.handle'
+                        });
+                        $parents.packery( 'bindDraggabillyEvents',draggie);
+                    })
+                })
+                let textareas = Array.prototype.slice.call(document.querySelectorAll('textarea'));
+                for(let i=0;i<textareas.length;i++){
+                    adjust(textareas[i]);
+                }
+            }
+
+            function Value(event){
+                let element = event.target;
+                element.setAttribute("value", element.value);
+            }
+           
+            function addField(event,i){
+            var html = document.createElement('DIV');
+            html.className = 'single-line '+ 'move';
+                if(i === 1){
+                var $grid = $(event.target.parentNode.parentNode.children[1]);
+               html.innerHTML = '<div><i class="fa fa-bullseye"></i></div><div style="width:100%;"><textarea placeholder="Your data" rows="1" onkeyup="adjust(this)"></textarea></div><div class="padding"><i class="fa fa-bars"></i></div><div class="padding"><button onclick="remove(event)"><i class="fa fa-trash-o"></i></button></div></div>';
+                }
+                else if(i === 0){
+            var $grid = $(event.target.parentNode.parentNode.children[0]);
+            html.className = 'single-line '+ 'move';
+            html.innerHTML = '<div style="width:100%;"><input type="text" placeholder="Your data"></div><div class="padding"><i class="fa fa-bars"></i></div><div class="padding"><button onclick="remove(event)"><i class="fa fa-trash-o"></i></button></div></div>';
+                }
+            
+            $grid.packery().append(html).packery('appended',html);
+            let $layout = $(document.querySelector('.sectionsmove'));
+            $layout.packery('shiftLayout');
+            function makeItemDraggable( itemElem ){
+                var draggie = new Draggabilly( itemElem );
+                $grid.packery('bindDraggabillyEvents',draggie);
+                }
+            makeItemDraggable(html);
+         }
+    
+         function remove(event){
+                let parent = (event.target.parentNode.parentNode.parentNode.parentNode);
+                var $info = $(parent);    
+                $info.one( 'click', '.move', function( event ) {
+                $info.packery( 'remove', event.currentTarget ).packery('shiftLayout');
+                let $layout = $(document.querySelector('.sectionsmove'));
+                $layout.packery('shiftLayout');
+                });
+         }
+    
+         function addsection(event){
+            let $layout = $(document.querySelector('.sectionsmove'));
+            const html = document.createElement('DIV');
+            html.className = 'parent';
+            html.style.cssText = 'width:100%;';
+            html.innerHTML  = `<h5 class="single-line handle" contenteditable="true">CUSTOM HEADING(EDIT ME)<button class="icon"  style="background-color:lightgrey;"><i class="fa fa-pencil" onclick="heading(event, 'mainsection')"></i></button><button class="icon" style="background-color:lightgrey;" ><i class="fa fa-bars"></i></button><button class="icon" style="background-color:lightgrey;" onclick="removesection()"><i class="fa fa-trash-o"></i></button></h5><div class="single-line toggle"><input type="text" placeholder="your heading here"><button ><i class="fa fa-check" onclick="changeHeading(event,'mainsection')"></button></i></div><div class="info"></div><div class="single-line" style="width:100%; justify-content:space-around;"><button class="icon" onclick="subsection(event)">Add Subsection</button><button class="icon" onclick="bullet(event)">Add Bullet</button><button class="icon" onclick="paragraph(event)">Add Paragraph</button></div></div>`;
+            $layout.packery().append(html).packery('appended',html);
+            function makeItemDraggable( itemElem ){
+                var draggie = new Draggabilly( itemElem,{
+                    handle:'.handle'
+                } );
+                $layout.packery('bindDraggabillyEvents',draggie);
+                }
+            makeItemDraggable(html);
+            updateScroll();
+        }
+    
+        function heading(event, type){
+            let element = (event.target.parentNode.parentNode.parentNode.children[1]);
+            element.classList.toggle('toggle');
+            let hide = event.target.parentNode.parentNode.parentNode.children[3];
+            hide.classList.toggle('toggle');
+            
+            }
+        
+        function changeHeading(event, valueType){
+            let hidden = event.target.parentNode.parentNode.parentNode.children[3];
+                hidden.classList.toggle('toggle');  
+            let value = (event.target.parentNode.parentNode.children[0].value);
+                let header = event.target.parentNode.parentNode.parentNode.children[0];
+               header.innerHTML = "";
+               if(valueType === 'subsection')
+               {
+                header.innerHTML = `${value}<button onclick="heading(event)" style="background-color:lightgrey;"><i class="fa fa-pencil icon"></i></button><button style="background-color:lightgrey;"><i class="fa fa-bars icon"></i></button><button style="background-color:lightgrey;" onclick="remove(event)"><i class="fa fa-trash-o icon"></i></button>`;
+               }
+               if(valueType === 'mainsection'){
+                header.innerHTML = `${value}<button onclick="heading(event)" style="background-color:lightgrey;"><i class="fa fa-pencil icon"></i></button><button style="background-color:lightgrey;"><i class="fa fa-bars icon"></i></button><button style="background-color:lightgrey;" onclick="removesection()"><i class="fa fa-trash-o icon"></i></button>`;
+               }
+               let element = (event.target.parentNode.parentNode.parentNode.children[1]);
+            element.classList.toggle('toggle');
+              
+    }
+    
+        function subsection(event){
+            let $parent = $(event.target.parentNode.parentNode.children[2]);
+            const html = document.createElement('DIV');
+            html.className = 'move';
+            html.style.cssText = 'width:100%;padding:15px;';
+            html.innerHTML  = `<h6 class="single-line" contenteditable="true">CUSTOM HEADING<buttonstyle="background-color:lightgrey;" ><i class="fa fa-pencil icon"  onclick="heading(event, 'subsection')" ></i></button><button style="background-color:lightgrey;" ><i class="fa fa-bars icon"></i></button><button class="icon" style="background-color:lightgrey;" onclick="remove(event)"><i class="fa fa-trash-o"></i></button></h6><div class="single-line toggle"><input type="text" placeholder="your sub heading here"><button class="icon" ><i class="fa fa-check" onclick="changeHeading(event, 'subsection')"></button></i></div><div></div><div class="single-line icon" style="width:100%; justify-content:space-around;"><button class="icon" onclick="subBullet(event)">Add SubBullet</button><button class="icon" onclick="subParagraph(event)">Add SubParagraph</button></div></div>`;
+            $parent.packery().append(html).packery('appended',html);
+            function makeItemDraggable( itemElem ){
+                var draggie = new Draggabilly( itemElem)
+                $parent.packery('bindDraggabillyEvents',draggie);
+                }
+            makeItemDraggable(html);
+            let $layout = $(document.querySelector('.sectionsmove'));
+            $layout.packery('shiftLayout');
+            updateScroll();
+        }   
+    
+        function bullet(event){
+            let $parent = $(event.target.parentNode.parentNode.children[2]);
+            const html = document.createElement('DIV');
+            html.className = 'move '+ 'single-line';
+            html.innerHTML  = '<div><i class="fa fa-bullseye"></i></div><div style="width:100%;"><textarea onkeyup="adjust(this)" placeholder="Custom data" rows="1"></textarea></div><div><button class="icon" onclick="remove(event)"><i class="fa fa-trash-o"></i></button></div></div>';
+            $parent.packery().append(html).packery('appended',html);
+            function makeItemDraggable( itemElem ){
+                var draggie = new Draggabilly( itemElem)
+                $parent.packery('bindDraggabillyEvents',draggie);
+                }
+            makeItemDraggable(html);
+            let $layout = $(document.querySelector('.sectionsmove'));
+            $layout.packery('shiftLayout');
+            updateScroll();
+        }   
+    
+        function paragraph(event){
+            let $parent = $(event.target.parentNode.parentNode.children[2]);
+            const html = document.createElement('DIV');
+            html.className = 'move '+ 'single-line';
+            html.innerHTML  = '<div style="width:100%;"><textarea onkeyup="adjust(this)" placeholder="Custom data" rows="1"></textarea></div><div><button class="icon" onclick="remove(event)"><i class="fa fa-trash-o"></i></button></div></div>';
+            $parent.packery().append(html).packery('appended',html);
+            function makeItemDraggable( itemElem ){
+                var draggie = new Draggabilly( itemElem)
+                $parent.packery('bindDraggabillyEvents',draggie);
+                }
+            makeItemDraggable(html);
+            let $layout = $(document.querySelector('.sectionsmove'));
+            $layout.packery('shiftLayout');
+            updateScroll();
+        }   
+    
+        function subBullet(event){
+            let parent = (event.target.parentNode.parentNode.children[2]);
+            let $arrange = $(event.target.parentNode.parentNode.parentNode);
+            const html = document.createElement('DIV');
+            html.className = 'single-line';
+            html.innerHTML  = '<div><i class="fa fa-bullseye"></i></div><div style="width:100%;"><textarea placeholder="Custom data" rows="1" onkeyup="adjustSubAdd(this,event)" ></textarea></div><div><button class="icon" onclick="removesub(event)"><i class="fa fa-trash-o"></i></button></div></div>';
+            parent.appendChild(html);
+            $arrange.packery('shiftLayout');
+            let $layout = $(document.querySelector('.sectionsmove'));
+            $layout.packery('shiftLayout');
+            adjustSub(parent);
+            updateScroll();
+        }
+
+        function adjustSub(parent){
+            parent.parentNode.style.height= 1+'px';
+            parent.parentNode.style.height = parent.parentNode.scrollHeight +'px';
+            let $adjust = $(parent.parentNode.parentNode);
+            $adjust.packery('shiftLayout');
+            let $layout = $(document.querySelector('.sectionsmove'));
+            $layout.packery('shiftLayout');
+            updateScroll();
+    }
+    
+        function subParagraph(event){
+            let parent = (event.target.parentNode.parentNode.children[2]);
+            let $arrange = $(event.target.parentNode.parentNode.parentNode);
+            const html = document.createElement('DIV');
+            html.className = 'single-line';
+            html.innerHTML  = '<div style="width:100%;"><textarea placeholder="Content" rows="1" onkeyup="adjustSubAdd(this,event)"></textarea></div><div><button class="icon" onclick="removesub(event)"><i class="fa fa-trash-o"></i></button></div></div>';
+            parent.appendChild(html);
+            $arrange.packery('shiftLayout');
+            let $layout = $(document.querySelector('.sectionsmove'));
+            $layout.packery('shiftLayout');
+            adjustSub(parent);
+            updateScroll();
+        }
+    
+        function removesub(event){
+            let parent = event.target.parentNode.parentNode.parentNode.parentNode;
+            parent.removeChild(event.target.parentNode.parentNode.parentNode);
+            adjustSub(parent);
+            updateScroll();
+    }
+    
+    
+    
+    function removesection(){
+        let $sections = $(document.querySelector('.sectionsmove'));
+        $sections.one( 'click', '.parent', function( event ) {
+                $sections.packery( 'remove', event.currentTarget ).packery('shiftLayout');
+                $sections.packery('shiftLayout');
+        });
+        updateScroll();
+    }
+    
+    function adjust(element){
+        element.style.height = 5+'px';
+        element.style.height = (12+element.scrollHeight) + 'px';
+        let $info = $(element.parentNode.parentNode.parentNode);
+        $info.packery('shiftLayout');
+        let $layout = $(document.querySelector('.sectionsmove'));
+            $layout.packery('shiftLayout');
+            element.innerHTML = element.value;
+    }
+    
+    function adjustSubAdd(element,event){
+        element.style.height = 5+'px';
+        element.style.height = (12+element.scrollHeight) + 'px';
+        adjustSub(event.target.parentNode.parentNode.parentNode);
+        updateScroll();
+        element.innerHTML = element.value;
+    }
+    
+    
+    function updateScroll(){
+               document.documentElement.scrollTop = document.documentElement.scrollHeight;
+            }   
+        </script>  
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="/js/packery.js"></script>
+    <script src="/js/draggable.js"></script>
+    <script src="/js/jspdf.js"></script>
+    <script src="/js/html2canvas.js"></script>
+    <script src="/js/index.js"></script>
+   
+
+</body>

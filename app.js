@@ -26,7 +26,7 @@ app.use(express.static('public'));
 app.use('/images',express.static('images'));
 // app.use('/templates', express.static('templates'));
 
-app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.urlencoded({limit:'50mb',extended:false}));
 app.use(session({secret:'secret', resave:false, saveUninitialized:false, store:store }));
 
 

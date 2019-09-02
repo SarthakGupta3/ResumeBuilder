@@ -37,6 +37,10 @@ download.addEventListener('click', function(){
     for(let i=0;i<remove.length;i++){
         remove[i].style.display = "none";
     }
+    // let parent = document.querySelectorAll('.parent');
+    // for(let i=0; i<parent.length;i++){
+    //     parent[i].style.height = parent[i].scrollHeight;
+    // }
     let $layout = $(document.querySelector('.sectionsmove'));
     $layout.packery('shiftLayout');
      html2canvas(document.querySelector('.download').parentNode,{
@@ -65,4 +69,3 @@ download.addEventListener('click', function(){
       doc.save('Resume.pdf');
     });
 });
-

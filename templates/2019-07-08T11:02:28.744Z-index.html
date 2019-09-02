@@ -339,10 +339,10 @@ input{
                header.innerHTML = "";
                if(valueType === 'subsection')
                {
-                header.innerHTML = `${value}<button onclick="heading(event)" style="background-color:lightgrey;"><i class="fa fa-pencil"></i></button><button style="background-color:lightgrey;"><i class="fa fa-bars"></i></button><button style="background-color:lightgrey;" onclick="remove(event)"><i class="fa fa-trash-o"></i></button>`;
+                header.innerHTML = `${value}<button onclick="heading(event)" style="background-color:lightgrey;"><i class="fa fa-pencil icon"></i></button><button style="background-color:lightgrey;"><i class="fa fa-bars icon"></i></button><button style="background-color:lightgrey;" onclick="remove(event)"><i class="fa fa-trash-o icon"></i></button>`;
                }
                if(valueType === 'mainsection'){
-                header.innerHTML = `${value}<button onclick="heading(event)" style="background-color:lightgrey;"><i class="fa fa-pencil"></i></button><button style="background-color:lightgrey;"><i class="fa fa-bars"></i></button><button style="background-color:lightgrey;" onclick="removesection()"><i class="fa fa-trash-o"></i></button>`;
+                header.innerHTML = `${value}<button onclick="heading(event)" style="background-color:lightgrey;"><i class="fa fa-pencil icon"></i></button><button style="background-color:lightgrey;"><i class="fa fa-bars icon"></i></button><button style="background-color:lightgrey;" onclick="removesection()"><i class="fa fa-trash-o icon"></i></button>`;
                }
                let element = (event.target.parentNode.parentNode.parentNode.children[1]);
             element.classList.toggle('toggle');
